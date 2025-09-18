@@ -14,6 +14,7 @@ const userReducer = (state = initState, action) => {
       };
     case ActionTypes.FETCH_USER:
       return {
+        ...state,
         currentUser: action.payload,
       };
 

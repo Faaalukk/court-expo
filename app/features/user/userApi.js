@@ -79,7 +79,7 @@ export function createUser(user) {
 export function editUser(user) {
   return async function (dispatch) {
     try {
-      const response = await axios.put(`${apiUrl}/user`, user);
+      const response = await axios.put(`${apiUrl}/user/${user.id}`, user);
       dispatch({
         type: ActionTypes.EDIT_USER,
         payload: response.data,
